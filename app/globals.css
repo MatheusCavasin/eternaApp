@@ -25,3 +25,45 @@ body {
     text-wrap: balance;
   }
 }
+
+/* TipTap editor content styles */
+.tiptap-editor > * + * {
+  margin-top: 0.625rem;
+}
+.tiptap-editor h1 {
+  @apply text-2xl font-bold text-slate-900;
+}
+.tiptap-editor h2 {
+  @apply text-xl font-bold text-slate-900;
+}
+.tiptap-editor h3 {
+  @apply text-lg font-bold text-slate-900;
+}
+.tiptap-editor ul {
+  @apply list-disc pl-5;
+}
+.tiptap-editor ol {
+  @apply list-decimal pl-5;
+}
+.tiptap-editor li {
+  @apply mb-1;
+}
+.tiptap-editor blockquote {
+  @apply border-l-4 border-slate-300 pl-4 italic text-slate-600;
+}
+.tiptap-editor code {
+  @apply rounded bg-slate-100 px-1 py-0.5 font-mono text-sm;
+}
+.tiptap-editor pre {
+  @apply rounded-lg bg-slate-900 p-4 text-slate-100;
+}
+.tiptap-editor pre code {
+  @apply bg-transparent p-0;
+}
+.tiptap-editor p.is-editor-empty:first-child::before {
+  color: #94a3b8;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
